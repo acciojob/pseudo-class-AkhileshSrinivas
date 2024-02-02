@@ -1,1 +1,24 @@
-/*  your css code here. If applicable */
+#container {
+    margin: 20px;
+    position: relative;
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+#container::before,
+#container::after {
+    content: 'Special Text';
+    color: #f00;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#container::before {
+    left: -120px;
+}
+
+#container::after {
+    right: -120px;
+}
